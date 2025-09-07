@@ -12,7 +12,7 @@ identify salary drivers, and predict salaries based on job-related factors.
 
 ## Files
 - `Data science Job salaries.ipynb` — The Jupyter notebook with full EDA, visuals, and conclusions.
-- `Data Science Job Salaries.csv` — Raw dataset (as uploaded by the user).
+- `Data Science Job Salaries.csv` — Raw dataset.
 
 ## Overview
 This project inspects job postings and salary information to:
@@ -24,7 +24,7 @@ This project inspects job postings and salary information to:
 
 ## How to run
 1. Clone or upload files to a GitHub repo.
-2. Open the notebook `Dat science Job salaries.ipynb` in Google Colab or Jupyter.
+2. Open the notebook `Data science Job salaries.ipynb` in Google Colab or Jupyter.
 3. Ensure dependencies are installed:
 Libriaries Used :
 
