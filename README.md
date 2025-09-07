@@ -6,6 +6,10 @@ Exploratory Data Analysis using dataset of Data Science Job Salaries
 
 This repository contains a polished Exploratory Data Analysis (EDA) notebook for the **Data Science Job Salaries** dataset.
 
+Objective: Analyze and model data science job salaries to uncover trends,
+identify salary drivers, and predict salaries based on job-related factors.
+
+
 ## Files
 - `Data science Job salaries.ipynb` — The Jupyter notebook with full EDA, visuals, and conclusions.
 - `Data Science Job Salaries.csv` — Raw dataset (as uploaded by the user).
@@ -37,6 +41,12 @@ source .venv/bin/activate
 streamlit run Streamlit_DS_Salaries.py
 
 ```
+## Salary Predictor App
+
+Below is a screenshot of the interactive Data Science Salary Predictor built with Streamlit:
+
+![Salary Predictor Screenshot](predictor_screenshot.png)
+
 4. Run all cells.
 
 ## Notes
