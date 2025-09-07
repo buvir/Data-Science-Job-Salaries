@@ -1,46 +1,4 @@
 
-
-# import streamlit as st
-# import pandas as pd
-# import joblib
-# import numpy as np
-
-# # Load model and feature columns
-# model = joblib.load('salary_predictor.joblib')
-# model_features = joblib.load('model_features.joblib')
-
-
-# st.title('Data Science Salary Predictor')
-
-# experience_level = st.selectbox('Experience Level', ['Entry-Level/Junior', 'Mid-level/Intermediate', 'Senior-level/Expert', 'Executive-level/Director'])
-# employment_type = st.selectbox('Employment Type', ['Full-time', 'Part-time', 'Contract', 'Freelance'])
-# remote_ratio = st.selectbox('Remote Ratio', ['No remote work', 'Partially remote', 'Fully remote'])
-# company_size = st.selectbox('Company Size', ['Small(<50)', 'Medium(50-250)', 'Large(>250)'])
-# job_title = st.selectbox('Job Title', sorted(pd.read_csv("Data Science Job Salaries.csv")['job_title'].unique()))
-
-# # Create a DataFrame for the input
-# input_dict = {
-#     'experience_level': [experience_level],
-#     'employment_type': [employment_type],
-#     'remote_ratio': [remote_ratio],
-#     'company_size': [company_size],
-#     'job_title': [job_title]
-# }
-# input_df = pd.DataFrame(input_dict)
-
-# # One-hot encode input to match training columns
-# input_encoded = pd.get_dummies(input_df)
-# # Add missing columns (set to 0)
-# for col in model_features:
-#     if col not in input_encoded.columns:
-#         input_encoded[col] = 0
-# input_encoded = input_encoded[model_features]
-
-# if st.button('Predict Salary'):
-#     prediction = model.predict(input_encoded)[0]
-#     st.success(f'Predicted Salary (USD): ${prediction:,.0f}')
-
-
 import streamlit as st
 import pandas as pd
 import joblib
@@ -50,6 +8,9 @@ st.title('Data Science Salary Explorer & Predictor')
 
 # Load dataset
 ds_salaries = pd.read_csv("Data Science Job Salaries.csv")
+
+ds_salaries.drop('Unnamed: 0', axis=1, inplace=True)
+ds_salaries.head()
 
 
 
@@ -84,6 +45,7 @@ input_encoded = input_encoded[model_features]
 if st.button('Predict Salary'):
     prediction = model.predict(input_encoded)[0]
     st.success(f'Predicted Salary (USD): ${prediction:,.0f}')
+
 
 
 # --- Section 1: Data Exploration ---

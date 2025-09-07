@@ -26,9 +26,26 @@ This project inspects job postings and salary information to:
 1. Clone or upload files to a GitHub repo.
 2. Open the notebook `Dat science Job salaries.ipynb` in Google Colab or Jupyter.
 3. Ensure dependencies are installed:
+Libriaries Used :
+
+pandas: Data manipulation and analysis; loading, cleaning, and transforming tabular data.
+
+numpy: Numerical operations and efficient array computations.
+
+matplotlib: Creating static visualizations and plots.
+
+seaborn: Statistical data visualization built on top of matplotlib; easier and more attractive plots.
+
+scikit-learn: Machine learning library for model building, training, and evaluation.
+
+ipykernel: Jupyter kernel for running Python code in notebooks.
+
+streamlit: Building interactive web apps and dashboards for data science projects
+
+
+
 ```bash
 
-pip install pandas matplotlib seaborn
 
 pip install -r requirements.txt #for all the libariries in one txt
 
@@ -47,11 +64,35 @@ Below is a screenshot of the interactive Data Science Salary Predictor built wit
 
 ![Salary Predictor Screenshot](predictor_screenshot.png)
 
-4. Run all cells.
 
-## Notes
-- The notebook includes code to coerce salary text to numeric (`_salary_num`). Double-check currency and ranges for your use-case.
-- If your dataset has differently named columns, the notebook attempts to detect likely column names automatically. Adjust cell code if necessary.
+
+
+## Key Visualizations
+
+**Top 10 Job Titles by Count**
+![Bar Chart](bar_chart_job_titles.png)
+
+**Average Salary by Experience Level**
+![Column Chart](column_chart_experience.png)
+
+
 
 ## Conclusion
-See the notebook's **Conclusion & Actionable Insights** section for final recommendations.
+
+This project provides a comprehensive analysis of the Data Science Job Salaries dataset to uncover key trends and salary drivers in the data science job market. Through exploratory data analysis and predictive modeling, I found that:
+
+Senior-level/Expert roles dominate the data science job market, while Executive-level/Director positions are rare.
+
+The most common job titles are Data Scientist, Data Engineer, Data Analyst, and Machine Learning Engineer.
+
+Full-time employment is overwhelmingly the norm in data science roles.
+
+The United States has the highest concentration of both data science professionals and companies, but the highest average salaries are observed in Russia and the US.
+
+Salaries and job opportunities have increased each year and with higher experience levels.
+
+Medium and large companies tend to offer higher salaries compared to small companies.
+
+The average salary for data science jobs in this dataset is approximately $112,298 USD.
+
+A linear regression model was built to predict salaries based on job-related factors, enabling users to estimate expected compensation for various roles and profiles.
