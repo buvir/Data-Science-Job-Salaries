@@ -23,7 +23,19 @@ This project inspects job postings and salary information to:
 2. Open the notebook `Dat science Job salaries.ipynb` in Google Colab or Jupyter.
 3. Ensure dependencies are installed:
 ```bash
+
 pip install pandas matplotlib seaborn
+
+pip install -r requirements.txt #for all the libariries in one txt
+
+#To create and activate a Python virtual environment (venv) in your Codespace, use these #commands in your terminal:
+
+python3 -m venv .venv
+source .venv/bin/activate 
+
+# to run  your streamlit  file
+streamlit run Streamlit_DS_Salaries.py
+
 ```
 4. Run all cells.
 
